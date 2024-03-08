@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\Role\PermissionController;
 use App\Http\Controllers\Role\RoleController;
+use App\Http\Controllers\Settings\SchoolController;
+use App\Http\Controllers\Student\StudentController;
 use App\Livewire\Roles\Permissions;
 use App\Livewire\Roles\Roles;
 use Illuminate\Support\Facades\Route;
@@ -36,5 +38,18 @@ Route::get('roles', [RoleController::class, 'index'])
 Route::get('permissions', [PermissionController::class, 'index'])
 ->middleware(['auth'])
 ->name('permissions');
+
+// school settings
+Route::get('/school-settings', [SchoolController::class,'index'])
+    ->middleware(['auth'])
+    ->name('settings-school');
+
+
+
+// students
+Route::get('students', [StudentController::class, 'index'])
+    ->middleware(['auth'])
+    ->name('students.list');
+
 
 require __DIR__.'/auth.php';

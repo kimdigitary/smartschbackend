@@ -24,6 +24,8 @@
 
     <!-- Scripts -->
 	<!-- Style css -->
+    <script src="https://cdn.tiny.cloud/1/ay8b8rfu66zhziozlkci5274ate04z7608ll6rwi3i5lw7p3/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <link href="https://unpkg.com/filepond@^4/dist/filepond.css" rel="stylesheet" />
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link href={{ asset('css/style.css') }} rel="stylesheet">
 
@@ -563,7 +565,7 @@
 
     <script src={{ asset('js/custom.js') }}></script>
 	<script src={{ asset('js/dlabnav-init.js') }}></script>
-
+    <script src="https://unpkg.com/filepond@^4/dist/filepond.js"></script>
 
 	<script>
 		$(function () {
@@ -579,5 +581,6 @@
 
 
 	</script>
+    @stack('scripts')
 </body>
 </html>

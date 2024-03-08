@@ -20,7 +20,7 @@
                     <span class="nav-text">Students</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="{{ route('students.list') }}" wire:navigate>Student list</a></li>
                 </ul>
 
             </li>
@@ -102,7 +102,7 @@
                 </a>
                 <ul aria-expanded="false">
                     <li><a href="{{ route('roles') }}" wire:navigate>Roles</a></li>
-                    <li><a href="courses.html">Permissions</a></li>
+                    <li><a href="{{ route('settings-school') }}" wire:navigate>School Settings</a></li>
                 </ul>
             </li>
         </ul>
