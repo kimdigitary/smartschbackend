@@ -23,7 +23,7 @@ $login = function () {
 
 ?>
 
-<div>
+{{-- <div>
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
@@ -67,4 +67,49 @@ $login = function () {
             </x-primary-button>
         </div>
     </form>
+</div> --}}
+
+<div class="row justify-content-center h-100 align-items-center">
+    <div class="col-md-6">
+        <div class="authincation-content">
+            <div class="row no-gutters">
+                <div class="col-xl-12">
+                    <div class="auth-form">
+                        <div class="text-center mb-3" style="display: flex; justify-content: center; align-items: center;">
+                            <a href="index.html"><img src="images/logo-full.png" alt=""></a>
+                        </div>
+                        <x-auth-session-status class="mb-4" :status="session('status')" />
+                        <form wire:submit="login">
+                            <div class="mb-3">
+                                <label class="mb-1"><strong>Email</strong></label>
+                                <input type="email" wire:model="form.email" id="email" name="email" class="form-control" placeholder="hello@example.com">
+                                <x-input-error :messages="$errors->get('email')" class="mt-2" />
+                            </div>
+                            <div class="mb-3">
+                                <label class="mb-1"><strong>Password</strong></label>
+                                <input type="password" class="form-control" wire:model="form.password" id="password" name="password" placeholder="Password">
+                                <x-input-error :messages="$errors->get('password')" class="mt-2" />
+                            </div>
+                            <div class="row d-flex justify-content-between mt-4 mb-2">
+                                <div class="mb-3">
+                                   <div class="form-check custom-checkbox ms-1">
+                                        <input wire:model="form.remember" id="remember" type="checkbox" class="form-check-input">
+                                        <label class="form-check-label" for="basic_checkbox_1">Remember my preference</label>
+                                    </div>
+                                </div>
+                                @if (Route::has('password.request'))
+                                <div class="mb-3">
+                                    <a href="{{ route('password.request') }}" wire:navigate>Forgot Password?</a>
+                                </div>
+                                @endif
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary btn-block">Sign Me In</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
