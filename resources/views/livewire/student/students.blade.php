@@ -14,10 +14,10 @@
 						<div class="card students-list">
 							<div class="card-header border-0 grid grid-cols-12 mt-3 mb-1">
                                 <div>
-                                    <h4 class="text-success">Export CSV</h4>
+                                    <h4 style="color: #29AB87">Export CSV</h4>
                                 </div>
 								<div class="">
-									<a class="bg-success text-white py-3 px-3 rounded fw-bold">
+									<a class="text-white py-3 px-3 rounded fw-bold" style="background-color: #29AB87">
                                         Add Student
                                     </a>
 								</div>
