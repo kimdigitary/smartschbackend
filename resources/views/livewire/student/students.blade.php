@@ -166,7 +166,7 @@
             </div>
             <div class="mt-5"><h4 class="text-center">1234567898</h4></div>
             <div class="text-center">
-                <img src="images/egucation-girl.png" alt="std image" class="rounded-circle">
+                <img src="images/egucation-girl.png" alt="std image" class="rounded-circle" style="height: 150px; width: 150px;">
             </div>
             <h4 class="text-center pt-2">Karen Hope</h4>
             <div class="text-center fs-4">S.3</div>
